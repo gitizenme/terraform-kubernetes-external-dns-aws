@@ -5,8 +5,9 @@ Terraform module [External-dns](https://github.com/kubernetes-sigs/external-dns)
 ## Usage
 
 ```
-module "external_dns" {
-  source = "gitizenme/external-dns/aws"
+module "external-dns-aws" {
+  source  = "gitizenme/external-dns-aws/kubernetes"
+  version = "1.0.1"
 
   domain           = "my-domain.com"
   k8s_cluster_name = "cluster-name
