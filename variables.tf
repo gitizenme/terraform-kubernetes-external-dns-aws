@@ -22,7 +22,7 @@ variable "domain" {
 }
 
 variable "hosted_zone_id" {
-  description = ""
+  description = "Zone ID for the Route 53 DNS"
   type        = string
 }
 
@@ -41,5 +41,10 @@ variable "k8s_cluster_type" {
 
 variable "k8s_cluster_name" {
   description = "Current Cluster Name"
+  type        = string
+}
+
+variable "aws_zone_type" {
+  description = "Route 53 DNS Zone Type: public | private"
   type        = string
 }
