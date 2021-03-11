@@ -206,7 +206,7 @@ resource "kubernetes_deployment" "this" {
             "--source=ingress",
             "--domain-filter=${var.domain}",
             "--provider=aws",
-            "--policy=upsert-only",
+            "--policy=${var.sync_policy}",
             "--aws-zone-type=${var.aws_zone_type}",
             "--registry=txt",
             "--txt-owner-id=${var.hosted_zone_id}",
