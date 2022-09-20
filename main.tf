@@ -205,6 +205,7 @@ resource "kubernetes_deployment" "this" {
             "--source=service",
             "--source=ingress",
             "--domain-filter=${var.domain}",
+            "--annotation-filter=${var.annotation_filter}",
             "--provider=aws",
             "--policy=${var.sync_policy}",
             "--aws-zone-type=${var.aws_zone_type}",
