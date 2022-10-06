@@ -2,7 +2,7 @@ locals {
   external_dns_docker_image = "k8s.gcr.io/external-dns/external-dns:v${var.external_dns_version}"
   external_dns_version      = var.external_dns_version
 
-  default_name = "aws-eks-istio-external-dns-${lower(var.hosted_zone_id)}-${random_string.suffix.result}"
+  default_name = "aws-eks-external-dns-${lower(var.hosted_zone_id)}-${random_string.suffix.result}"
 
   iam_name = "eks-external-dns-${lower(var.hosted_zone_id)}-${lower(var.k8s_cluster_name)}-${random_string.suffix.result}"
 }
